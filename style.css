@@ -1,0 +1,138 @@
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Arial', sans-serif;
+}
+
+.setup-screen, .game-board {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+}
+
+h1 {
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #2a5298;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.setup-options > div {
+    margin-bottom: 2rem;
+}
+
+.marker-buttons, .opponent-buttons, .difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.marker-btn, .opponent-btn, .difficulty-btn {
+    background: #e0e0e0;
+    color: #333;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button.selected {
+    background: #1e3c72;
+    color: white;
+}
+
+.start-btn {
+    display: block;
+    width: 100%;
+    background: #4CAF50;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.start-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+.cell {
+    aspect-ratio: 1;
+    background: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background: #d0d0d0;
+}
+
+.status {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+.reset-btn {
+    display: block;
+    width: 100%;
+    background: #f44336;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .setup-screen, .game-board {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .cell {
+        font-size: 1.5rem;
+    }
+}

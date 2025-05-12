@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="game-container">
+    <div class="setup-screen" id="setupScreen">
+        <h1>Tic Tac Toe</h1>
+        <div class="setup-options">
+            <div class="marker-selection">
+                <h2>Choose Your Marker</h2>
+                <div class="marker-buttons">
+                    <button class="marker-btn" onclick="selectMarker('X')">X</button>
+                    <button class="marker-btn" onclick="selectMarker('O')">O</button>
+                </div>
+            </div>
+            <div class="opponent-selection">
+                <h2>Choose Your Opponent</h2>
+                <div class="opponent-buttons">
+                    <button class="opponent-btn" onclick="selectOpponent('player')">Player 2</button>
+                    <button class="opponent-btn" onclick="selectOpponent('bot')">Bot</button>
+                </div>
+            </div>
+            <div class="difficulty-selection" id="difficultySelection" style="display: none;">
+                <h2>Select Difficulty</h2>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" onclick="selectDifficulty('easy')">Easy</button>
+                    <button class="difficulty-btn" onclick="selectDifficulty('hard')">Hard</button>
+                </div>
+            </div>
+            <button class="start-btn" onclick="startGame()" disabled>Start Game</button>
+        </div>
+    </div>
+
+    <div class="game-board" id="gameBoard" style="display: none;">
+        <div class="status" id="status"></div>
+        <div class="board">
+            <div class="cell" onclick="makeMove(0)"></div>
+            <div class="cell" onclick="makeMove(1)"></div>
+            <div class="cell" onclick="makeMove(2)"></div>
+            <div class="cell" onclick="makeMove(3)"></div>
+            <div class="cell" onclick="makeMove(4)"></div>
+            <div class="cell" onclick="makeMove(5)"></div>
+            <div class="cell" onclick="makeMove(6)"></div>
+            <div class="cell" onclick="makeMove(7)"></div>
+            <div class="cell" onclick="makeMove(8)"></div>
+        </div>
+        <button class="reset-btn" onclick="resetGame()">New Game</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

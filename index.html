@@ -15,25 +15,25 @@
             <div class="marker-selection">
                 <h2>Choose Your Marker</h2>
                 <div class="marker-buttons">
-                    <button class="marker-btn" onclick="selectMarker('X')">X</button>
-                    <button class="marker-btn" onclick="selectMarker('O')">O</button>
+                    <button class="marker-btn" data-marker="X">X</button>
+                    <button class="marker-btn" data-marker="O">O</button>
                 </div>
             </div>
             <div class="opponent-selection">
                 <h2>Choose Your Opponent</h2>
                 <div class="opponent-buttons">
-                    <button class="opponent-btn" onclick="selectOpponent('player')">Player 2</button>
-                    <button class="opponent-btn" onclick="selectOpponent('bot')">Bot</button>
+                    <button class="opponent-btn" data-opponent="player">Player 2</button>
+                    <button class="opponent-btn" data-opponent="bot">bot</button>
                 </div>
             </div>
             <div class="difficulty-selection" id="difficultySelection" style="display: none;">
                 <h2>Select Difficulty</h2>
                 <div class="difficulty-buttons">
-                    <button class="difficulty-btn" onclick="selectDifficulty('easy')">Easy</button>
-                    <button class="difficulty-btn" onclick="selectDifficulty('hard')">Hard</button>
+                    <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                    <button class="difficulty-btn" data-difficulty="hard">hard</button>
                 </div>
             </div>
-            <button class="start-btn" onclick="startGame()" disabled>Start Game</button>
+            <button class="start-btn" disabled>Start Game</button>
         </div>
     </div>
 
